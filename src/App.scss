@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@300;500;700&family=Open+Sans&display=swap");
 .app {
-  @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@300;500;700&family=Open+Sans&display=swap");
   font-family: "Manrope", sans-serif;
   width: 100vw;
   height: 100vh;
@@ -8,4 +8,5 @@
   justify-content: flex-start;
   align-items: center;
   background: #fff;
+  overflow-x: hidden;
 }

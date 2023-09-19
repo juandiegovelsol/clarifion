@@ -5,8 +5,24 @@ import stars from "../../assets/Stars.svg";
 import verify from "../../assets/verify.svg";
 import bluetick from "../../assets/bluetick.svg";
 import guarantee from "../../assets/guarantee.png";
+import product_resume from "../../assets/product_resume.png";
+import star from "../../assets/star.svg";
+import selector from "../../assets/selector.svg";
+import discount from "../../assets/discount.svg";
+import buttonarrow from "../../assets/buttonarrow.svg";
+import visa from "../../assets/visa.svg";
+import shoppay from "../../assets/shoppay.svg";
+import paypal from "../../assets/paypal.svg";
+import mastercard from "../../assets/mastercard.svg";
+import gpay from "../../assets/gpay.svg";
+import applepay from "../../assets/applepay.svg";
+import amex from "../../assets/amex.svg";
+import lock from "../../assets/lock.svg";
 
 const Container = () => {
+  const n = 5;
+  const payment = [visa, shoppay, paypal, mastercard, gpay, applepay, amex];
+
   return (
     <section className="container">
       <aside className="container__left">
@@ -40,7 +56,33 @@ const Container = () => {
           <span className="container__rigth-blue">$14 each</span> ($84.00
           total!)
         </div>
-        <div className="container__rigth-article"></div>
+        <div className="container__rigth-article">
+          <div className="container__rigth-img">
+            <img src={product_resume} alt="product_resume" />
+          </div>
+          <div className="container__rigth-imginfo">
+            <div className="container__rigth-price">
+              <div className="subtitle">Clarifion Air Ionizer</div>
+              <div className="price">
+                <div className="prev">$180</div>
+                <div className="post">$84</div>
+              </div>
+            </div>
+            <div className="container__rigth-stars">
+              {[...Array(n)].map((e, i) => (
+                <img src={star} alt="star" key={i} />
+              ))}
+            </div>
+            <div className="container__rigth-stock">
+              <img src={selector} alt="selector" />
+              <p>12 left in Stock</p>
+            </div>
+            <p className="container__rigth-description">
+              Simply plug a Clarifion into any standard outlet and replace
+              bulky, expensive air purifiers with a simple.
+            </p>
+          </div>
+        </div>
         <div className="container__rigth-feature">
           <div className="container__rigth-featurebox">
             <img src={bluetick} alt="bluetick" />
@@ -61,8 +103,35 @@ const Container = () => {
             </p>
           </div>
         </div>
-        <div className="container__rigth-discount"></div>
-        <div className="container__rigth-getdiscount"></div>
+        <div className="container__rigth-discount">
+          <img src={discount} alt="discount" />
+          <p>
+            Save <span>53%</span> and get <span>6 extra Clarifision</span> for
+            only <span>$14 Each</span>.
+          </p>
+        </div>
+        <div className="container__rigth-getdiscount">
+          <button className="container__rigth-button">
+            <p>Yes - Claim my discount</p>
+            <img src={buttonarrow} alt="buttonarrow" />
+          </button>
+          <div className="container__rigth-payment">
+            <p>Free shipping</p>
+            <a></a>
+            <span>
+              <img src={lock} alt="lock" />
+              <p>Secure 256-bit SSL encryption.</p>
+            </span>
+            <a></a>
+            <div>
+              {payment.length &&
+                payment.map((e, i) => <img src={e} alt="payment" key={i} />)}
+            </div>
+          </div>
+          <button className="container__rigth-cancel">
+            No thanks, I don’t want this.
+          </button>
+        </div>
         <div className="container__rigth-guarantee">
           <img src={guarantee} alt="guarantee" />
           <p>
