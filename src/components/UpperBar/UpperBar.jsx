@@ -28,6 +28,7 @@ const UpperBar = () => {
   return (
     <header className="upper-bar">
       <img src={arrow} className="upper-bar__arrow" alt="arrow" />
+
       {content.length &&
         content.map(({ image, text }) => (
           <section key={text} className="upper-bar__section">
@@ -39,6 +40,7 @@ const UpperBar = () => {
             <p className="upper-bar__section-text">{text}</p>
           </section>
         ))}
+
       <img src={arrow} className="upper-bar__arrow" alt="arrow" />
     </header>
   );

@@ -122,7 +122,7 @@ const Container = () => {
               <img src={lock} alt="lock" />
               <p>Secure 256-bit SSL encryption.</p>
             </span>
-            <a></a>
+            <a className="horizontal"></a>
             <div>
               {payment.length &&
                 payment.map((e, i) => <img src={e} alt="payment" key={i} />)}

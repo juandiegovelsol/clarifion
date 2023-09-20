@@ -43,7 +43,9 @@ const ProcessBar = () => {
                     className="process-bar__check"
                   />
                 </span>
-                <p className="process-bar__text">{`Step ${step}: ${text}`}</p>
+                <p className="process-bar__text">
+                  <span>Step {step}:</span> {text}
+                </p>
               </>
             ) : status === "progress" ? (
               <>
@@ -53,7 +55,9 @@ const ProcessBar = () => {
                     {step}
                   </p>
                 </span>
-                <p className="process-bar__text process-bar__text-bold">{`Step ${step}: ${text}`}</p>
+                <p className="process-bar__text process-bar__text-bold">
+                  <span>Step {step}:</span> {text}
+                </p>
               </>
             ) : (
               <>
@@ -63,7 +67,9 @@ const ProcessBar = () => {
                     {step}
                   </p>
                 </span>
-                <p className="process-bar__text">{`Step ${step}: ${text}`}</p>
+                <p className="process-bar__text">
+                  <span>Step {step}:</span> {text}
+                </p>
               </>
             )}
           </article>
