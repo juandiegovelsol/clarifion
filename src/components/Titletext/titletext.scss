@@ -23,3 +23,22 @@
     text-transform: capitalize;
   }
 }
+@media (max-width: 500px) {
+  .titletext {
+    margin-top: 40px;
+    top: 0px;
+    &__h1 {
+      color: #000;
+      text-align: center;
+      font-size: 32px;
+      line-height: 140%; /* 44.8px */
+    }
+    &__p {
+      width: 90%;
+      color: #4d5254;
+      text-align: center;
+      font-size: 16px;
+      line-height: 140%; /* 22.4px */
+    }
+  }
+}

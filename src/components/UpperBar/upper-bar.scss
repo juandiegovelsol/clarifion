@@ -32,3 +32,27 @@
     text-transform: capitalize;
   }
 }
+@media (max-width: 500px) {
+  .upper-bar {
+    max-height: 44px;
+
+    &__arrow {
+      display: flex;
+    }
+    &__arrow:nth-child(even) {
+      transform: rotate(180deg);
+    }
+    &__section {
+      display: none;
+      &:first-child {
+        display: flex;
+      }
+      &:nth-child(2) {
+        display: flex;
+      }
+      &:nth-child(6) {
+        display: flex;
+      }
+    }
+  }
+}
